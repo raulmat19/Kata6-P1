@@ -1,15 +1,15 @@
 package kata6.toys;
 
-public class Car {
+public class Helicopter {
     
     final private Integer serialNumber;
     final String type;
 
-    public Car(Integer serialNumber) {
+    public Helicopter(Integer serialNumber) {
         this.serialNumber = serialNumber;
-        this.type = "car";
+        this.type = "helicopter";
     }
-    
+
     public Integer getSerialNumber() {
         return serialNumber;
     }
