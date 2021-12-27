@@ -33,7 +33,7 @@ public class AsianHelicopterToy implements Toy{
 
     @Override
     public String toString() {
-        return "AmericanHelicopterToy{" + "serialNumber=" + serialNumber + '}';
+        return "AsianHelicopterToy{" + "serialNumber=" + serialNumber + '}';
     }
     
     

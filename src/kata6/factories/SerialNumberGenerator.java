@@ -1,4 +1,4 @@
-package kata6.business;
+package kata6.factories;
 
 public class SerialNumberGenerator {
     

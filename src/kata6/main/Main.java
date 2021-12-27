@@ -4,10 +4,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 import kata6.toyproduct.Toy;
-import kata6.branches.AmericanToyBusiness;
-import kata6.branches.AsianToyBusiness;
-import kata6.business.SerialNumberGenerator;
 import kata6.business.ToyBusiness;
+import kata6.factories.regionalfactories.AmericanToyFactory;
+import kata6.factories.regionalfactories.AsianToyFactory;
 
 public class Main {
 
@@ -25,14 +24,14 @@ public class Main {
             switch (line) {
                 case "asia":
                 case "Asia":
-                    business = new AsianToyBusiness();
+                    business = new ToyBusiness(new AsianToyFactory());
                     break;
                 
                 case "America":
                 case "América":
                 case "america":
                 case "américa":
-                    business = new AmericanToyBusiness();
+                    business = new ToyBusiness(new AmericanToyFactory());
                     break;
                 
                 default:
@@ -48,7 +47,7 @@ public class Main {
             switch (line) {
                 case "car":
                 case "helicopter":
-                    toys.add(business.createToy(line));
+                    toys.add(business.produceToy(line));
                     System.out.println("Built toys: " + toys.stream()
                             .map(c -> c.toString())
                             .collect(Collectors.joining(", ")));
