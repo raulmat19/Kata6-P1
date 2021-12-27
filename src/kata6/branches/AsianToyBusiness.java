@@ -1,24 +1,24 @@
-package kata6.toys;
+package kata6.branches;
 
+import kata6.business.ToyBusiness;
 import kata6.toyproduct.Toy;
-import kata6.toyproduct.models.CarToy;
-import kata6.toyproduct.models.HelicopterToy;
+import kata6.toyproduct.models.AsianCarToy;
+import kata6.toyproduct.models.AsianHelicopterToy;
 
-public class ToyBusiness {
+public class AsianToyBusiness extends ToyBusiness{
     
-    public SerialNumberGenerator generator = new SerialNumberGenerator();
-    
+    @Override
     public Toy createToy(String type){
        
         switch(type) {
             case "car":
-                CarToy car = new CarToy(this.generator.next());
+                AsianCarToy car = new AsianCarToy(this.generator.next());
                 car.pack();
                 car.label();
                 return car;
                 
             case "helicopter":
-                HelicopterToy hc = new HelicopterToy(this.generator.next());
+                AsianHelicopterToy hc = new AsianHelicopterToy(this.generator.next());
                 hc.pack();
                 hc.label();
                 return hc;

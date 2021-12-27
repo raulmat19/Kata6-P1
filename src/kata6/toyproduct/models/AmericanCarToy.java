@@ -2,12 +2,12 @@ package kata6.toyproduct.models;
 
 import kata6.toyproduct.Toy;
 
-public class CarToy implements Toy{
+public class AmericanCarToy implements Toy{
     
     final private Integer serialNumber;
     final String type;
 
-    public CarToy(Integer serialNumber) {
+    public AmericanCarToy(Integer serialNumber) {
         this.serialNumber = serialNumber;
         this.type = "car";
     }
@@ -33,7 +33,7 @@ public class CarToy implements Toy{
 
     @Override
     public String toString() {
-        return "CarToy{" + "serialNumber=" + serialNumber + '}';
+        return "AmericanCarToy{" + "serialNumber=" + serialNumber + '}';
     }
     
     
